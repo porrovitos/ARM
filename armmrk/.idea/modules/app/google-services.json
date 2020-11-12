@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "579320436323",
+    "firebase_url": "https://armmrk-course.firebaseio.com",
+    "project_id": "armmrk-course",
+    "storage_bucket": "armmrk-course.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579320436323:android:a5b5f9fa4e086519ab0a56",
+        "android_client_info": {
+          "package_name": "com.example.armmrk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "579320436323-5stechuo4f0jc2gi25gc9rh2s0010dli.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.armmrk",
+            "certificate_hash": "f2f2937d120dc71334680228f377d53a1df95621"
+          }
+        },
+        {
+          "client_id": "579320436323-2dg10nmouopf9tjplb1cbbovobv71thj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQV7kI691yhLKybN5STFq5s3qf1fYtul0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "579320436323-2dg10nmouopf9tjplb1cbbovobv71thj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

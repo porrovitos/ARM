@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">АРМ</string>
+    <string name="app_in_name">АРМ Будущий студентик</string>
+    <string name="text_down">Войдите в свою учетную запись</string>
+    <string name="signin_bottom">ВОЙТИ</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Секретарь приемной комиссии</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Создать документ договора</string>
+    <string name="menu_upload_document">загрузить документ</string>
+    <string name="menu_folder_docs">архив документов</string>
+</resources>
