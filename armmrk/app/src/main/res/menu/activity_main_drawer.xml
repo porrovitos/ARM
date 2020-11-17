@@ -13,5 +13,8 @@
         <item
             android:id="@+id/nav_folder_docs"
             android:title="@string/menu_folder_docs" />
+        <item
+            android:id="@+id/nav_create_doc"
+            android:title="@string/menu_create_docs" />
     </group>
 </menu>

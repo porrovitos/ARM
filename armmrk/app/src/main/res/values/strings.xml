@@ -11,7 +11,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Создать документ договора</string>
-    <string name="menu_upload_document">загрузить документ</string>
-    <string name="menu_folder_docs">архив документов</string>
+    <string name="menu_home">Главная страница</string>
+    <string name="menu_upload_document">Загрузить документ</string>
+    <string name="menu_folder_docs">Архив документов</string>
+    <string name="menu_create_docs">Создание документа</string>
+    <string name="menu_of_students">Список абитуриентов</string>
 </resources>

@@ -12,19 +12,28 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
+        android:id="@+id/nav_create_doc"
+        android:name="com.example.armmrk.ui.newdoc.NewdocFragment"
+        android:label="@string/menu_create_docs"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
         android:id="@+id/nav_gallery"
         android:name="com.example.armmrk.ui.gallery.GalleryFragment"
         android:label="@string/menu_upload_document"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
+        android:id="@+id/nav_students"
+        android:name="com.example.armmrk.ui.students.StudentsFragment"
+        android:label="@string/menu_of_students"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
         android:id="@+id/nav_folder_docs"
         android:name="com.example.armmrk.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_folder_docs"
         tools:layout="@layout/fragment_slideshow" />
-    <fragment
-        android:id="@+id/nav_create_doc"
-        android:name="com.example.armmrk.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_folder_docs"
-        tools:layout="@layout/fragment_slideshow" />
+
+
 </navigation>
