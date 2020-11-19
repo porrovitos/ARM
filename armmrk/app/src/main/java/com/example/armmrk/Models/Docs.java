@@ -2,16 +2,24 @@ package com.example.armmrk.Models;
 
 public class Docs {
     String invoiceNo;
+    String docNo;
     String studentName;
     String otdelName;
     String specialnostName;
     String educationTipName;
 
+    public String getDocNo() {
+        return docNo;
+    }
+
+    public void setDocNo(String docNo) {
+        this.docNo = docNo;
+    }
     public String getInvoiceNo() {
         return invoiceNo;
     }
 
-    public void setInvoiceNo(String invoideNo) {
+    public void setInvoiceNo(String invoiceNo) {
         this.invoiceNo = invoiceNo;
     }
 

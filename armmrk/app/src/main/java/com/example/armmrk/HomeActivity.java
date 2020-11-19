@@ -28,7 +28,7 @@ Button test;
     }
 
     private void Zapysk() {
-        startActivity(new Intent(HomeActivity.this, NewDocActivity.class));
+        startActivity(new Intent(HomeActivity.this, DocumentListActivity.class));
         finish();
     }
 
