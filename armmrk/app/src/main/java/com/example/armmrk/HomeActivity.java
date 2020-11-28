@@ -10,27 +10,49 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class HomeActivity extends AppCompatActivity {
-Button test;
+Button students,archive,newDoc,uploadDoc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_home);
-        test = findViewById(R.id.button_test);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        test.setOnClickListener(new View.OnClickListener() {
+        students = findViewById(R.id.button4);
+        students.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Zapysk();
+                startActivity(new Intent(HomeActivity.this, StudentsListActivity.class));
+                finish();
+            }
+        });
+
+        newDoc= findViewById(R.id.button);
+        newDoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, NewDocActivity.class));
+                finish();
+            }
+        });
+
+        uploadDoc= findViewById(R.id.button2);
+        uploadDoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, DocumentListActivity.class));
+                finish();
+            }
+        });
+
+        archive= findViewById(R.id.button3);
+        archive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, ArchiveActivity.class));
+                finish();
             }
         });
 
     }
 
-    private void Zapysk() {
-        startActivity(new Intent(HomeActivity.this, DocumentListActivity.class));
-        finish();
-    }
 
 
 

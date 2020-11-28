@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
                     .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                         @Override
                         public void onSuccess(AuthResult authResult) {
-                            startActivity(new Intent(MainActivity.this, HomeActivity.class )); //Изменить потом обратно на HomeActivity!!!
+                            startActivity(new Intent(MainActivity.this, HomeActivity.class ));
                             finish();
                         }
                     }).addOnFailureListener(new OnFailureListener() {

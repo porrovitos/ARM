@@ -1,17 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
 
-    <Button
-        android:id="@+id/button_test"
+    <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:layerType="none"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/student1" />
+    <Button
+        android:id="@+id/button"
+        android:width="150dp"
+        android:height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Новый документ"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginLeft="37dp"/>
+    <Button
+        android:id="@+id/button2"
+        android:width="150dp"
+        android:height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Список документов"
+        android:layout_alignTop="@+id/button"
+        android:layout_toEndOf="@+id/button"
+        android:layout_marginLeft="37dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="37dp"
+        android:width="150dp"
+        android:height="100dp"
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Архив документов"
+        android:layout_below="@+id/button2"
+
+       />
+
+    <Button
+        android:layout_marginLeft="37dp"
+        android:width="150dp"
+        android:height="100dp"
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Список абитуриентов"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_below="@+id/button3"
+        android:layout_alignTop="@+id/button3"
+        android:layout_toEndOf="@+id/button3"
+        />
+
+
+
+</RelativeLayout>

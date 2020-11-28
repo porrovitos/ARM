@@ -3,6 +3,7 @@ package com.example.armmrk;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -42,7 +43,7 @@ public class DocumentListActivity extends AppCompatActivity {
     String educationTipName;
     String docNo;
 
-    Button button;
+    Button button,back;
     EditText NoOfDoc;
     DataTable dataTable;
     DataTableHeader header;
@@ -61,6 +62,14 @@ public class DocumentListActivity extends AppCompatActivity {
                 .build();
         loadTable();
         clickPrint();
+        back = findViewById(R.id.BackButton);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DocumentListActivity.this, HomeActivity.class));
+                finish();
+            }
+        });
     }
 
     private void clickPrint() {
@@ -132,7 +141,7 @@ public class DocumentListActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     DataTableRow row = new DataTableRow.Builder()
-                            .value(String.valueOf(dataSnapshot.child("invoiceNo").getValue()))
+                            .value(String.valueOf(dataSnapshot.child("invoiceNo").getValue()  ))
                             .value(String.valueOf(dataSnapshot.child("studentName").getValue()))
                             .build();
                     rows.add(row);

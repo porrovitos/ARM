@@ -3,6 +3,7 @@ package com.example.armmrk;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -26,18 +27,19 @@ import com.google.firebase.database.ValueEventListener;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 
 
 public class NewDocActivity extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("docs");
-    Button save_button, print_button;
+
+    Button save_button, print_button,back;
     EditText editTextDocNum, editTextName;
     Spinner spinner_otdel,spinner_spec,spinner_tip;
     String[] ItemList,ItemList1, ItemList2;
     ArrayAdapter<String> adapter,adapter1,adapter2;
     long invoiceNo = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +60,14 @@ public class NewDocActivity extends AppCompatActivity {
             }
         });
 
+        back = findViewById(R.id.BackButton);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(NewDocActivity.this, HomeActivity.class));
+                finish();
+            }
+        });
     }
 
     private void PressPrintButton() {
@@ -112,13 +122,13 @@ public class NewDocActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Docs docs = new Docs();
-                docs.setInvoiceNo(String.valueOf(invoiceNo));
+                docs.setInvoiceNo(String.valueOf(invoiceNo + 1));
                 docs.setDocNo(String.valueOf(editTextDocNum.getText()));
                 docs.setStudentName(String.valueOf(editTextName.getText()));
                 docs.setOtdelName(spinner_otdel.getSelectedItem().toString());
                 docs.setSpecialnostName(spinner_spec.getSelectedItem().toString());
                 docs.setEducationTipName(spinner_tip.getSelectedItem().toString());
-                myRef.child(String.valueOf(invoiceNo)).setValue(docs);
+                myRef.child(String.valueOf(invoiceNo + 1)).setValue(docs);
             }
         });
     }
